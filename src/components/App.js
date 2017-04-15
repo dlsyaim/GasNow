@@ -19,10 +19,12 @@ const App = () => (
 		panOpenMask={0.1}
 		panCloseMask={0.9}
 		captureGestures={'closed'}
-		tweenHandler={(ratio) => ({
+		tweenHandler={(ratio) => (
+									{
+										drawer: {shadowRadius: ratio < 0.2 ? ratio*5*5 : 5},
 										main: { opacity:(2-ratio)/2 }
 									})}
-		content={<SideMenu avatar={require('../../assets/avatar.png')} username="Nguyễn Mạnh Hiệp" point={36} notification={14}/>}
+		content={<SideMenu avatar={require('../../assets/avatar04.png')} username="Nguyễn Mạnh Hiệp" point={36} notification={14}/>}
 	>
 		<Content/>
 	</Drawer>

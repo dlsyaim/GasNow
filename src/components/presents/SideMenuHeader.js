@@ -4,6 +4,7 @@ import {
 	View,
 	Text,
 	Image,
+	PixelRatio,
 } from 'react-native';
 const styles = StyleSheet.create({
 	header: {
@@ -20,6 +21,8 @@ const styles = StyleSheet.create({
 		width: 64,
 		height: 64,
 		borderRadius: 32,
+		borderWidth: 1/PixelRatio.get(),
+		borderColor: '#5C961D',
 	},
 	name: {
 		fontSize: 14,
