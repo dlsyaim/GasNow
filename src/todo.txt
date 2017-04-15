@@ -1,0 +1,6 @@
+1, Style SideMenuItem
+2, Add GoogleMap to HomePage.
+3, Fetch List and Render List in list page
+	3.1 Fetch
+	3.2 Render List
+	3.3 Style it & items.

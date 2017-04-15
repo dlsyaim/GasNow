@@ -2,10 +2,17 @@ import React from 'react';
 import {
 	View,
 	Text,
+	StyleSheet,
 } from 'react-native';
-import styles from '../styles';
 import SideMenuItem from './SideMenuItem';
 import SideMenuHeader from '../presents/SideMenuHeader';
+
+const styles = StyleSheet.create({
+	sidemenu: {
+		flex: 1,
+		backgroundColor: '#FAFAFA',
+	}
+})
 let SideMenu = ({avatar, username, point, notification}) => (
 	<View style={styles.sidemenu}>
 		<SideMenuHeader avatar={avatar} username={username} point={point} />

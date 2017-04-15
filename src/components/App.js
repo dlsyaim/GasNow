@@ -1,7 +1,12 @@
 import React from 'react';
 import Drawer from 'react-native-drawer';
 import Content from './containers/Content';
+import Header from './containers/Header';
 import SideMenu from './containers/SideMenu';
+import {
+	View,
+	StatusBar,
+} from 'react-native';
 
 const drawerStyles = {
 	drawer: {
@@ -10,15 +15,16 @@ const drawerStyles = {
 		shadowRadius: 3,
 	}
 };
+
 const App = () => (
 	<Drawer
 		type='overlay'
+		ref={drawer => this.drawer = drawer}
 		openDrawerOffset={100}
 		closedDrawerOffset={-3}
 		styles={drawerStyles}
 		panOpenMask={0.1}
-		panCloseMask={0.9}
-		captureGestures={'closed'}
+		panCloseMask={0.5}
 		tweenHandler={(ratio) => (
 									{
 										drawer: {shadowRadius: ratio < 0.2 ? ratio*5*5 : 5},
@@ -26,7 +32,20 @@ const App = () => (
 									})}
 		content={<SideMenu avatar={require('../../assets/avatar04.png')} username="Nguyễn Mạnh Hiệp" point={36} notification={14}/>}
 	>
-		<Content/>
+		<View style={{flex:1}}>
+			<StatusBar
+				backgroundColor="blue"
+				barStyle="light-content"
+			/>
+			<Header 
+				onBars={
+					() => {
+						this.drawer.open();
+					}
+				} 
+			/>
+			<Content />
+		</View>
 	</Drawer>
 )
 

@@ -2,7 +2,8 @@ import React from 'react';
 import {
 	StyleSheet,
 	Text,
-	View
+	View,
+	Platform
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -30,11 +31,11 @@ const HomePage = () => (
 			This is Home Page
 		</Text>
 		<Text style={styles.instructions}>
-			To get started, edit index.ios.js
+			Hello to React-Native
 		</Text>
 		<Text style={styles.instructions}>
-			Press Cmd+R to reload,{'\n'}
-			Cmd+D or shake for dev menu
+			Press {Platform.OS === 'ios' ? 'Cmd+R' : 'RR'} to reload,{'\n'}
+			{Platform.OS === 'ios' ? 'Cmd+D' : 'Menu Button'} or shake for dev menu
 		</Text>
 	</View>
 );

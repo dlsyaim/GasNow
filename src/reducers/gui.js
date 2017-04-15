@@ -8,7 +8,14 @@ const page = (state="home", action) => {
 			return state;
 	}
 }
-
+const sidemenu = (state={isOpen: false}, action) => {
+	switch(action.type) {
+		case "PRESS_MENUBAR":
+			return {...state, isOpen: !state.isOpen};
+		default:
+			return state;
+	}
+}
 const gui = combineReducers({
 	page,
 });
