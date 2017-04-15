@@ -1,11 +1,11 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {
 	View,
 	Text,
 } from 'react-native';
 import styles from '../styles';
 import SideMenuItem from './SideMenuItem';
-import SideMenuHeader from '../presnets/SideMenuHeader';
+import SideMenuHeader from '../presents/SideMenuHeader';
 let SideMenu = ({avatar, username, point, notification}) => (
 	<View style={styles.sidemenu}>
 		<SideMenuHeader avatar={avatar} username={username} point={point} />

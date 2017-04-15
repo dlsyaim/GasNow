@@ -9,30 +9,32 @@ const styles = StyleSheet.create({
 	header: {
 
 	},
-	status: {
-		height: 24,
-		backgroundColor: '#5C961D',
-	},
 	account: {
-		height: 148,
+		height: 172,
 		backgroundColor: '#7EC334',
+		justifyContent: 'center',
+		alignItems: 'center',
+
 	},
 	avatar: {
 		width: 64,
 		height: 64,
 		borderRadius: 32,
-		flex: 1,
 	},
 	name: {
-
+		fontSize: 14,
+		color: '#FFFFFF',
+		lineHeight: 20,
 	},
 });
 
 const SideMenuHeader = ({avatar, username, point}) => (
 	<View style={styles.header}>
-		<View style={styles.status}></View>
 		<View style={styles.account}>
-			
+			<Image style={styles.avatar} source={avatar}/>
+			<Text style={styles.name}>{username} | {point} điểm</Text>
 		</View>
 	</View>
 )
+
+export default SideMenuHeader;

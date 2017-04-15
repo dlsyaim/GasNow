@@ -5,26 +5,27 @@ import SideMenu from './containers/SideMenu';
 
 const drawerStyles = {
 	drawer: {
-		shadowColor: '#000',
+		shadowColor: '#000000',
 		shadowOpacity: 0.8,
 		shadowRadius: 3,
 	}
 };
 const App = () => (
-	<Drawer>
+	<Drawer
+		type='overlay'
+		openDrawerOffset={100}
+		closedDrawerOffset={-3}
+		styles={drawerStyles}
+		panOpenMask={0.1}
+		panCloseMask={0.9}
+		captureGestures={'closed'}
+		tweenHandler={(ratio) => ({
+										main: { opacity:(2-ratio)/2 }
+									})}
+		content={<SideMenu avatar={require('../../assets/avatar.png')} username="Nguyễn Mạnh Hiệp" point={36} notification={14}/>}
+	>
 		<Content/>
 	</Drawer>
 )
 
-App.propTypes = {
-	page: PropTypes.string.isRequired,
-}
-
-const mapStateToProps = (state) => {
-	return {
-		page: getPage(state)
-	}
-}
-
-App=connect(mapStateToProps, null)(App);
 export default App;

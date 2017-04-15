@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import { getPage } from '../reducers';
-import Home from './pages/Home';
+import { getPage } from '../../reducers';
+import Home from '../pages/Home';
 let Content = ({page}) => {
 	switch(page) {
 		case 'home':
