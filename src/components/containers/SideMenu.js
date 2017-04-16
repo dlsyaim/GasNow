@@ -16,10 +16,10 @@ const styles = StyleSheet.create({
 let SideMenu = ({avatar, username, point, notification}) => (
 	<View style={styles.sidemenu}>
 		<SideMenuHeader avatar={avatar} username={username} point={point} />
-		<SideMenuItem text="Tìm Cây Xăng" page="home"/>
-		<SideMenuItem text="Sẽ Đi Qua" page="list"/>
-		<SideMenuItem text="Đánh giá" page="comments" notification={notification}/>
-		<SideMenuItem text="Giới Thiệu" page="about"/>
+		<SideMenuItem icon="search" text="Tìm Cây Xăng" page="home"/>
+		<SideMenuItem icon="list" text="Sẽ Đi Qua" page="list"/>
+		<SideMenuItem icon="comment-o" text="Đánh giá" page="comments" notification={notification}/>
+		<SideMenuItem icon="info-circle" text="Giới Thiệu" page="about"/>
 	</View>
 )
 
