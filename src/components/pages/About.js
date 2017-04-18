@@ -9,7 +9,8 @@ import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
 	container: {
-		...StyleSheet.absoluteFillObject,
+		flex:1,
+		
 		justifyContent: 'flex-end',
 		alignItems: 'center',
 	},
