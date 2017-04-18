@@ -2,10 +2,13 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import { getPage } from '../../reducers';
 import Home from '../pages/Home';
+import About from '../pages/About';
 let Content = ({page}) => {
 	switch(page) {
 		case 'home':
 			return <Home/>
+		case 'about':
+			return <About/>
 		default:
 			return null;
 	}
