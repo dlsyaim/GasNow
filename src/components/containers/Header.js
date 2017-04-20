@@ -27,6 +27,10 @@ const styles = StyleSheet.create({
 		left: 10,
 		bottom: -7,
 	},
+	btngift: {
+		right: 10,
+		bottom: -10,
+	},
 	title: {
 		fontSize: 20,
 		fontWeight: 'bold',
@@ -46,7 +50,17 @@ let Header = ({onBars, name}) => (
 		</TouchableOpacity>
 		
 		<Text style={styles.title}>{name}</Text>
-		<View style={{width: 10}}></View>
+
+		<TouchableOpacity
+			style={styles.btngift}
+			onPress={
+				() => {
+					console.log("Get Gifts");
+				}
+			}
+		>
+			<Icon name="gift" style={styles.iconbars}/>
+		</TouchableOpacity>
 	</View>
 );
 
