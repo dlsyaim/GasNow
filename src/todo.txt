@@ -1,5 +1,9 @@
-2, Add GoogleMap to HomePage.
-3, Fetch List and Render List in list page
-	3.1 Fetch
-	3.2 Render List
-	3.3 Style it & items.
+1, Làm 1 cái modal mới, có sử dụng animation giống uber và grab.
+	- Có thể tham khảo open source.
+	- Có thể tự viết nhưng có tham khảo code animation.
+	- Tô vẽ cho bên trong cái modal đó cho đẹp.
+		+ Tham khảo cái google map để vẽ thêm các type thành hình cái ly (quán ăn), cây xăng, chung cư...
+		+ Vẽ thêm list thể hiện lịch sử (xem Uber)
+2, Vẽ đường từ điểm đi đến đuổi cuối lên trên map
+	- Zoom không bị vỡ nét.
+3, Vẽ thêm cái picker lên trên map khi chọn điểm cuối.
