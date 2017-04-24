@@ -6,4 +6,7 @@
 		+ Vẽ thêm list thể hiện lịch sử (xem Uber)
 2, Vẽ đường từ điểm đi đến đuổi cuối lên trên map
 	- Zoom không bị vỡ nét.
-3, Vẽ thêm cái picker lên trên map khi chọn điểm cuối.
+3, Vẽ thêm cái marker lên trên map khi chọn điểm cuối.
+	- Xem vd: https://github.com/airbnb/react-native-maps/blob/master/example/examples/DefaultMarkers.js
+
+Lam 1 truoc, chon diem den -> lam 3: ve marker -> Lam 2: ve duong di.
